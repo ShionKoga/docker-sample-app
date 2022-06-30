@@ -15,5 +15,5 @@ RUN ./gradlew build -x test
 
 FROM public.ecr.aws/docker/library/openjdk:19-jdk
 COPY --from=serverBuild /tmp/server/build/libs/server-0.0.1-SNAPSHOT.jar ./app.jar
-EXPOSE 8080
+EXPOSE $PORT
 CMD ["sh", "-c", "java -jar app.jar"]

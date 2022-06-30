@@ -4,10 +4,10 @@ services:
     image: ${REPOSITORY_URI}
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
+      dockerfile: ./Dockerfile
       args:
         - REACT_APP_SERVER_URL=${REACT_APP_SERVER_URL}
     container_name: app
     ports:
-      - 8080:8080
+      - ${PORT}:${PORT}
     tty: true
