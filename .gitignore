@@ -4,3 +4,4 @@ docker/db/data/
 .env
 *.iml
 lib/
+.vscode
