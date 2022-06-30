@@ -1,0 +1,6 @@
+.DS_Store
+docker/db/data/
+.idea/
+.env
+*.iml
+lib/
