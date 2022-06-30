@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api/greeting")
 class Controller {
     @GetMapping
-    fun getMessage(): String {
-        return "hello"
+    fun getMessage(): List<String> {
+        return listOf("hello")
     }
 }
