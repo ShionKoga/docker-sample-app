@@ -4,7 +4,7 @@ export default function App() {
     const [message, setMessage] = useState('')
 
     useEffect(() => {
-        fetch('/api/greeting')
+        fetch(process.env.REACT_APP_SERVER_URL + '/api/greeting')
             .then(res => res.json())
             .then(messages => setMessage(messages[0]))
     })
